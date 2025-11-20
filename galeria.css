@@ -1,0 +1,44 @@
+.galeria-carrusel {
+  width: 100%;
+  max-width: 700px;
+  height: 400px;          
+  margin: 20px auto;
+  border: 1px solid #999;
+  background: #000;      
+  position: relative;
+  overflow: hidden;       
+}
+
+
+.galeria-carrusel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     
+  display: none;          
+}
+
+
+.galeria-carrusel img.activa {
+  display: block;
+}
+
+
+.galeria-botones {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.galeria-botones button {
+  background: #9E7C1C;
+  border: 1px solid #6b5312;
+  color: #fff;
+  padding: 6px 14px;
+  margin: 0 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.galeria-botones button:hover {
+  background: #b48e20;
+}

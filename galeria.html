@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería • Cantina Chichilo de Buenos Aires</title>
+
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="galeria.css">
+</head>
+<body>
+
+  <div class="banner-info">
+    Cantina Chichilo de Buenos Aires • Tradición italiana desde 1956
+  </div>
+
+ 
+  <header>
+    
+    CANTINA CHICHILO DE BUENOS AIRES
+  </header>
+
+ 
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="historia.html">Historia</a>
+    <a href="menu.html">Menú</a>
+    <a href="horarios.html">Horarios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  
+  <section class="hero">
+    <h2>Galería de Fotos</h2>
+    <p>Momentos, clientes y platos tradicionales de la cantina.</p>
+  </section>
+
+ 
+  <div class="contenedor">
+    <h2>Álbum de Fotos</h2>
+    <p class="subtitulo">Recuerdos de nuestra cantina en La Paternal</p>
+    <hr>
+
+   
+    <div class="galeria-carrusel">
+      <img src="imagenes/persona1comiendo.jpg" alt="Foto 1" class="slide activa">
+      <img src="imagenes/persona2comiendo.jpg" alt="Foto 2" class="slide">
+      <img src="imagenes/persona3comiendo.jfif" alt="Foto 3" class="slide">
+      <img src="imagenes/clienteabrazo.jpg" alt="Foto 4" class="slide">
+      <img src="imagenes/comida1.jpg" alt="Foto 5" class="slide">
+      <img src="imagenes/comida2.jpg" alt="Foto 6" class="slide">
+      <img src="imagenes/comida3.jpg" alt="Foto 7" class="slide">
+      <img src="imagenes/comida4.jpg" alt="Foto 8" class="slide">
+      <img src="imagenes/comida5.jpg" alt="Foto 9" class="slide">
+      <img src="imagenes/comida6.jfif" alt="Foto 10" class="slide">
+      <img src="imagenes/comida7.jfif" alt="Foto 11" class="slide">
+      <img src="imagenes/comida8.jpg" alt="Foto 12" class="slide">
+      <img src="imagenes/comida9.jpg" alt="Foto 13" class="slide">
+      <img src="imagenes/comida10.jpg" alt="Foto 14" class="slide">
+      <img src="imagenes/comida11.jpg" alt="Foto 15" class="slide">
+      <img src="imagenes/comida12.jpg" alt="Foto 16" class="slide">
+      <img src="imagenes/comida13.jpg" alt="Foto 17" class="slide">
+      <img src="imagenes/postre1.jpg" alt="Foto 18" class="slide">
+      <img src="imagenes/postre2.jpg" alt="Foto 19" class="slide">
+      <img src="imagenes/postre3.jpg" alt="Foto 20" class="slide">
+      <img src="imagenes/postre4.jpg" alt="Foto 21" class="slide">
+      <img src="imagenes/postre5.jpg" alt="Foto 22" class="slide">
+      <img src="imagenes/postre6.jpg" alt="Foto 23" class="slide">
+      <img src="imagenes/postre7.jpg" alt="Foto 24" class="slide">
+    </div>
+
+    <div class="galeria-botones">
+      <button type="button" onclick="anterior()">⟵ Anterior</button>
+      <button type="button" onclick="siguiente()">Siguiente ⟶</button>
+    </div>
+
+  </div>
+
+
+  <footer>
+    <h2>Información de contacto</h2>
+    <p>Dirección: Camarones 1901 esquina Terrero 2006 (1416), CABA</p>
+    <p>Teléfonos: 011-4584-1263 · 011-4581-1984 (Reservas)</p>
+    <p>Email: chichilo3554@hotmail.com</p>
+    <p><a href="galeria.html">Visite nuestro álbum de fotos</a></p>
+  </footer>
+
+
+  <script>
+    let indice = 0;
+    const slides = document.querySelectorAll('.galeria-carrusel .slide');
+
+    function mostrarSlide(i) {
+      slides.forEach(img => img.classList.remove('activa'));
+      slides[i].classList.add('activa');
+    }
+
+    function siguiente() {
+      indice = (indice + 1) % slides.length;
+      mostrarSlide(indice);
+    }
+
+    function anterior() {
+      indice = (indice - 1 + slides.length) % slides.length;
+      mostrarSlide(indice);
+    }
+  </script>
+
+</body>
+</html>
